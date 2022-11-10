@@ -39,7 +39,7 @@ public class yatez {
     }
     
     public String toString() {
-        return "sdadfgsersafs";
+        return die1.value + " " + die2.value + " " + die3.value + " " + die4.value + " " + die5.value;
     }
     
 }
