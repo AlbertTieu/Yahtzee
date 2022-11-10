@@ -37,4 +37,9 @@ public class yatez {
     public void summarize() {
         
     }
+    
+    public String toString() {
+        return "sdadfgsersafs";
+    }
+    
 }
