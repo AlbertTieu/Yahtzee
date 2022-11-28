@@ -9,7 +9,7 @@ public class Die6
   /**
    * Contains the current value of the die
    */
-  public int value;
+  private int value;
 
   /**
    * Constructor to do an initial roll to set the first value

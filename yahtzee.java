@@ -12,14 +12,13 @@ public class yahtzee {
     int amt5 = 0;
     int amt6 = 0;
     String str = "";
-    Scanner scanner = new Scanner(str);
     public yahtzee() {
         die1 = new Die6();
         die2 = new Die6();
         die3 = new Die6();
         die4 = new Die6();
         die5 = new Die6();
-        str = die1.value + " " + die2.value + " " + die3.value + " " + die4.value + " " + die5.value;
+        str = die1.getValue() + " " + die2.getValue() + " " + die3.getValue() + " " + die4.getValue() + " " + die5.getValue();
     }
 
     public void roll() {
@@ -45,14 +44,15 @@ public class yahtzee {
     }
     
     public String summarize() {
-         str = die1.value + " " + die2.value + " " + die3.value + " " + die4.value + " " + die5.value;
+         str = die1.getValue() + " " + die2.getValue() + " " + die3.getValue() + " " + die4.getValue() + " " + die5.getValue();
+         Scanner scanner = new Scanner(str);
          amt1=0;
          amt2=0;
          amt3=0;
          amt4=0;
          amt5=0;
          amt6=0;
-         while (scanner.hasNextInt()) {
+         while (scanner.hasNext()) {
              if (scanner.hasNext("1")) {
                  amt1++;
              }
@@ -71,13 +71,13 @@ public class yahtzee {
              if (scanner.hasNext("6")) {
                  amt6++;
              }
-             scanner.nextInt();
+             scanner.next();
          }
-         return "1-"+amt1+"; "+"2-"+amt1+"; "+"3-"+amt1+"; "+"4-"+amt1+"; "+"5-"+amt1+"; "+"6-"+amt6;
+         return "1-"+amt1+"; "+"2-"+amt2+"; "+"3-"+amt3+"; "+"4-"+amt4+"; "+"5-"+amt5+"; "+"6-"+amt6;
     }
     
     public String toString() {
-        str = die1.value + " " + die2.value + " " + die3.value + " " + die4.value + " " + die5.value;
+        str = die1.getValue() + " " + die2.getValue() + " " + die3.getValue() + " " + die4.getValue() + " " + die5.getValue();
         return str;
     }
     
